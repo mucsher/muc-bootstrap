@@ -1,0 +1,75 @@
+// Mucstrap Utility classes
+//=====================================
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+.block, .show {
+  display: block;
+}
+.block-ipt {
+  display: block!important;
+}
+// Toggling content
+.hide-ipt {
+  display: none!important;
+}
+.show-ipt {
+  display: block!important;
+}
+
+// Visibility
+.invisible-ipt {
+  visibility: hidden!important;
+}
+
+.img {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    text-indent: -9999px;
+    &.by-width {background-size: 100% auto;}
+    &.by-height{background-size: auto 100%;}
+}
+.bg-white {background-color: #ffffff;}
+.bg-white-ipt {background-color: #ffffff!important;}
+
+.marginAndPadding(20);
+.fontSizeLoop(20);
+.widthSizeLoop(400, 50);
+.widthSizeLoop(50, 5);
+
+.italic {font-style: italic;}
+.bold {font-weight: bold;}
+.valignT {vertical-align: top;}
+.valignM {vertical-align: middle;}
+.valignB {vertical-align: bottom;}
+
+.t-left   {text-align: left;}
+.t-right  {text-align: right;}
+.t-center   {text-align: center;}
+.t-justify  {text-align: justify;}
+.t-left-ipt   {text-align: left !important;}
+.t-right-ipt  {text-align: right !important;}
+.t-center-ipt   {text-align: center !important;}
+.t-justify-ipt  {text-align: justify!important;}
+.underline {text-decoration: underline;}
+
+.pos-rel {position: relative;}
+.pos-rel-ipt {position: relative!important;}
+.pos-abs {position: absolute;}
+.pos-abs-ipt {position: absolute!important;}
+.pos-sta {position: static;}
+.pos-sta-ipt {position: static!important;}
+
+.fake-border {
+  border: none!important;
+  .box-shadow(0px 0px 0px 1px #ccc);
+}
+
+.no-resize {
+  resize: none;
+}

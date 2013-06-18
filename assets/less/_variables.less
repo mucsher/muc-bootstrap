@@ -1,0 +1,40 @@
+/*=========================================
+=            REPLACE VARIABLES            =
+=========================================*/
+
+// TODO: Typography
+@sansFontFamily:        Arial, Helvetica, sans-serif;;
+@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+@monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
+
+@baseFontSize:          12px;
+@baseFontFamily:        @sansFontFamily;
+@baseLineHeight:        18px;
+@altFontFamily:         @serifFontFamily;
+
+
+// TODO: Sprite icons path
+// -------------------------
+@iconSpritePath:          "../img/icons/glyphicons-halflings.png";
+@iconWhiteSpritePath:     "../img/icons/glyphicons-halflings-white.png";
+
+
+// TODO: GRID
+// --------------------------------------------------
+
+// TODO: _Default 940px grid
+// -------------------------
+@gridColumns:             12;
+@gridColumnWidth:         60px;
+@gridGutterWidth:         20px;
+@gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+
+// TODO: _1200px min
+@gridColumnWidth1200:     70px;
+@gridGutterWidth1200:     30px;
+@gridRowWidth1200:        (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1));
+
+// TODO: _768px-979px
+@gridColumnWidth768:      42px;
+@gridGutterWidth768:      20px;
+@gridRowWidth768:         (@gridColumns * @gridColumnWidth768) + (@gridGutterWidth768 * (@gridColumns - 1));

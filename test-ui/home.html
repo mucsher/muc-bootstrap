@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>TEST UI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="View Grid Layout">
+		<meta name="author" content="mucsher">
+		<style>
+			body {
+				position: relative;
+				padding-top: 40px;
+			}
+			.col-fixed, .col-fluid, .col-fixed-two {
+				padding: 10px 0;
+				text-align: center;
+			}
+			.col-fixed, .col-fixed-one {
+				background-color: #BCFE7C;
+			}
+			.col-fixed-two {
+				background-color: ##FCE224;
+			}
+			.col-fluid {
+				background-color: #8FB5D9;
+			}
+		</style>
+		<!-- Le styles -->
+		<link href="../assets/css/main.css" rel="stylesheet">
+		<link href="../assets/css/main-responsive.css" rel="stylesheet">
+		<link href="../assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+		<link href="css/docs.css" rel="stylesheet">
+		
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			<script src="../assets/js/html5.js"></script>
+		<![endif]-->
+		
+		<!--[if IE 7]>
+			<link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+		<![endif]-->
+		
+		<!-- Le fav and touch icons -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+		<link rel="shortcut icon" href="../assets/ico/favicon.png">
+	</head>
+	
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a data-target=".navbar-inverse-collapse" data-toggle="collapse" class="btn btn-navbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</a>
+					<a href="#" class="brand">Mucstrap</a>
+					<div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav">
+							<li class="active"><a href="home.html">Home</a></li>
+							<li class=""><a href="layout.html">Layout</a></li>
+							<li class="dropdown">
+								<a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Action</a></li>
+									<li><a href="#">Another action</a></li>
+									<li><a href="#">Something else here</a></li>
+									<li class="divider"></li>
+									<li class="nav-header">Nav header</li>
+									<li><a href="#">Separated link</a></li>
+									<li><a href="#">One more separated link</a></li>
+								</ul>
+							</li>
+						</ul>
+						<form action="" method="get" class="navbar-search pull-left">
+							<input type="text" placeholder="Search" class="search-query span2">
+						</form>
+						<ul class="nav pull-right">
+							<li><a href="#">Link</a></li>
+							<li class="divider-vertical"></li>
+							<li class="dropdown">
+								<a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Action</a></li>
+									<li><a href="#">Another action</a></li>
+									<li><a href="#">Something else here</a></li>
+									<li class="divider"></li>
+									<li><a href="#">Separated link</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div><!-- /.nav-collapse -->
+				</div>
+			</div><!-- /navbar-inner -->
+		</div>
+		<div class="container">
+			<div id="main">
+				<!--section id="GridSystem">
+					<div class="page-header">
+						<h1>Heading</h1>
+					</div>
+					<h2>Sub Heading</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</section-->
+				<section>
+					<div class="page-header">
+						<h1>Form</h1>
+					</div>
+					<div class="row-fluid">
+						<div class="span6">
+							<form class="form-horizontal">
+								<div class="control-group">
+									<label class="control-label" for="inputEmail">Email</label>
+									<div class="controls">
+										<input type="text" id="inputEmail" placeholder="Email">
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="inputPassword">Password</label>
+									<div class="controls">
+										<input type="password" id="inputPassword" placeholder="Password">
+									</div>
+								</div>
+								<div class="control-group">
+									<div class="controls">
+										<label class="checkbox">
+											<input type="checkbox"> Remember me
+										</label>
+										<button type="submit" class="btn">Sign in</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="span6">
+							<form class="form-inline">
+								<input type="text" class="input-small" placeholder="Email">
+								<input type="password" class="input-small" placeholder="Password">
+								<label class="checkbox">
+									<input type="checkbox"> Remember me
+								</label>
+								<button type="submit" class="btn">Sign in</button>
+							</form>
+							<div>
+								<label class="checkbox inline">
+									<input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+								</label>
+								<label class="checkbox inline">
+									<input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+								</label>
+								<label class="checkbox inline">
+									<input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+								</label>
+							</div>
+							<div>
+								<label class="checkbox">
+									<input type="checkbox" value="">
+									Option one is this and that—be sure to include why it's great
+								</label>
+								
+								<label class="radio">
+									<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+									Option one is this and that—be sure to include why it's great
+								</label>
+								<label class="radio">
+									<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+									Option two can be something else and selecting it will deselect option one
+								</label>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="GridSystem">
+					<div class="page-header">
+						<h1>Button</h1>
+					</div>
+					<div class="row-fluid">
+						<div class="span6">
+							<div class="mgB20">
+								<button class="btn" type="button">Default</button>
+								<button class="btn btn-primary" type="button">Primary</button>
+								<button class="btn btn-info" type="button">Info</button>
+								<button class="btn btn-success" type="button">Success</button>
+								<button class="btn btn-warning" type="button">Warning</button>
+								<button class="btn btn-danger" type="button">Danger</button>
+								<button class="btn btn-inverse" type="button">Inverse</button>
+							</div>
+							<div class="mgB20">
+								<p>
+									<button class="btn btn-large btn-primary" type="button">Large button</button>
+									<button class="btn btn-large" type="button">Large button</button>
+								</p>
+								<p>
+									<button class="btn btn-primary" type="button">Default button</button>
+									<button class="btn" type="button">Default button</button>
+								</p>
+								<p>
+									<button class="btn btn-small btn-primary" type="button">Small button</button>
+									<button class="btn btn-small" type="button">Small button</button>
+								</p>
+								<p>
+									<button class="btn btn-mini btn-primary" type="button">Mini button</button>
+									<button class="btn btn-mini" type="button">Mini button</button>
+								</p>	
+							</div>
+							<div class="mgB20">
+							</div>
+						</div>
+						<div class="span6">
+							<div class="mgB20">
+								<div style="margin: 0;" class="btn-toolbar">
+									<div class="btn-group">
+										<button data-toggle="dropdown" class="btn dropdown-toggle">Action <span class="caret"></span></button>
+										<ul class="dropdown-menu">
+											<li><a href="#">Action</a></li>
+											<li><a href="#">Another action</a></li>
+											<li><a href="#">Something else here</a></li>
+											<li class="divider"></li>
+											<li><a href="#">Separated link</a></li>
+										</ul>
+									</div><!-- /btn-group -->
+									<div class="btn-group">
+										<button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Action <span class="caret"></span></button>
+										<ul class="dropdown-menu">
+											<li><a href="#">Action</a></li>
+											<li><a href="#">Another action</a></li>
+											<li><a href="#">Something else here</a></li>
+											<li class="divider"></li>
+											<li><a href="#">Separated link</a></li>
+										</ul>
+									</div><!-- /btn-group -->
+									<div class="btn-group">
+										<button data-toggle="dropdown" class="btn btn-danger dropdown-toggle">Danger <span class="caret"></span></button>
+										<ul class="dropdown-menu">
+											<li><a href="#">Action</a></li>
+											<li><a href="#">Another action</a></li>
+											<li><a href="#">Something else here</a></li>
+											<li class="divider"></li>
+											<li><a href="#">Separated link</a></li>
+										</ul>
+									</div><!-- /btn-group -->
+									<div class="btn-group">
+										<button data-toggle="dropdown" class="btn btn-warning dropdown-toggle">Warning <span class="caret"></span></button>
+										<ul class="dropdown-menu">
+											<li><a href="#">Action</a></li>
+											<li><a href="#">Another action</a></li>
+											<li><a href="#">Something else here</a></li>
+											<li class="divider"></li>
+											<li><a href="#">Separated link</a></li>
+										</ul>
+									</div><!-- /btn-group -->
+									<div class="btn-group">
+										<button data-toggle="dropdown" class="btn btn-success dropdown-toggle">Success <span class="caret"></span></button>
+										<ul class="dropdown-menu">
+											<li><a href="#">Action</a></li>
+											<li><a href="#">Another action</a></li>
+											<li><a href="#">Something else here</a></li>
+											<li class="divider"></li>
+											<li><a href="#">Separated link</a></li>
+										</ul>
+									</div><!-- /btn-group -->
+									<div class="btn-group">
+										<button data-toggle="dropdown" class="btn btn-info dropdown-toggle">Info <span class="caret"></span></button>
+										<ul class="dropdown-menu">
+											<li><a href="#">Action</a></li>
+											<li><a href="#">Another action</a></li>
+											<li><a href="#">Something else here</a></li>
+											<li class="divider"></li>
+											<li><a href="#">Separated link</a></li>
+										</ul>
+									</div><!-- /btn-group -->
+									<div class="btn-group mgT10 mgL0-ipt">
+										<button data-toggle="dropdown" class="btn btn-inverse dropdown-toggle">Inverse <span class="caret"></span></button>
+										<ul class="dropdown-menu">
+											<li><a href="#">Action</a></li>
+											<li><a href="#">Another action</a></li>
+											<li><a href="#">Something else here</a></li>
+											<li class="divider"></li>
+											<li><a href="#">Separated link</a></li>
+										</ul>
+									</div><!-- /btn-group -->
+								</div>
+							</div>
+							<div class="mgB20">
+								<div style="margin: 0;" class="btn-toolbar">
+									<div class="btn-group">
+										<button data-toggle="dropdown" class="btn btn-large dropdown-toggle">Large button <span class="caret"></span></button>
+										<ul class="dropdown-menu">
+											<li><a href="#">Action</a></li>
+											<li><a href="#">Another action</a></li>
+											<li><a href="#">Something else here</a></li>
+											<li class="divider"></li>
+											<li><a href="#">Separated link</a></li>
+										</ul>
+									</div><!-- /btn-group -->
+									<div class="btn-group">
+										<button data-toggle="dropdown" class="btn btn-small dropdown-toggle">Small button <span class="caret"></span></button>
+										<ul class="dropdown-menu">
+											<li><a href="#">Action</a></li>
+											<li><a href="#">Another action</a></li>
+											<li><a href="#">Something else here</a></li>
+											<li class="divider"></li>
+											<li><a href="#">Separated link</a></li>
+										</ul>
+									</div><!-- /btn-group -->
+									<div class="btn-group">
+										<button data-toggle="dropdown" class="btn btn-mini dropdown-toggle">Mini button <span class="caret"></span></button>
+										<ul class="dropdown-menu">
+											<li><a href="#">Action</a></li>
+											<li><a href="#">Another action</a></li>
+											<li><a href="#">Something else here</a></li>
+											<li class="divider"></li>
+											<li><a href="#">Separated link</a></li>
+										</ul>
+									</div><!-- /btn-group -->
+								</div>
+							</div>
+							<div class="mgB20">
+								
+							</div>
+							<div class="mgB20">
+								
+							</div>
+							<div class="mgB20">
+								
+							</div>
+							
+						</div>
+						
+					</div>
+				</section>
+				<section id="icons">
+					<div class="page-header">
+						<h1>Icons <small>by <a target="_blank" href="http://glyphicons.com">Glyphicons</a></small></h1>
+					</div>
+					
+					<h2>Icon glyphs</h2>
+					<p>140 icons in sprite form, available in dark gray (default) and white, provided by <a target="_blank" href="http://glyphicons.com">Glyphicons</a>.</p>
+					<ul class="the-icons clearfix">
+						<li><i class="icon-glass"></i> icon-glass</li>
+						<li><i class="icon-music"></i> icon-music</li>
+						<li><i class="icon-search"></i> icon-search</li>
+						<li><i class="icon-envelope"></i> icon-envelope</li>
+						<li><i class="icon-heart"></i> icon-heart</li>
+						<li><i class="icon-star"></i> icon-star</li>
+						<li><i class="icon-star-empty"></i> icon-star-empty</li>
+						<li><i class="icon-user"></i> icon-user</li>
+						<li><i class="icon-film"></i> icon-film</li>
+						<li><i class="icon-th-large"></i> icon-th-large</li>
+						<li><i class="icon-th"></i> icon-th</li>
+						<li><i class="icon-th-list"></i> icon-th-list</li>
+						<li><i class="icon-ok"></i> icon-ok</li>
+						<li><i class="icon-remove"></i> icon-remove</li>
+						<li><i class="icon-zoom-in"></i> icon-zoom-in</li>
+						<li><i class="icon-zoom-out"></i> icon-zoom-out</li>
+						<li><i class="icon-off"></i> icon-off</li>
+						<li><i class="icon-signal"></i> icon-signal</li>
+						<li><i class="icon-cog"></i> icon-cog</li>
+						<li><i class="icon-trash"></i> icon-trash</li>
+						<li><i class="icon-home"></i> icon-home</li>
+						<li><i class="icon-file"></i> icon-file</li>
+						<li><i class="icon-time"></i> icon-time</li>
+						<li><i class="icon-road"></i> icon-road</li>
+						<li><i class="icon-download-alt"></i> icon-download-alt</li>
+						<li><i class="icon-download"></i> icon-download</li>
+						<li><i class="icon-upload"></i> icon-upload</li>
+						<li><i class="icon-inbox"></i> icon-inbox</li>
+						
+						<li><i class="icon-play-circle"></i> icon-play-circle</li>
+						<li><i class="icon-repeat"></i> icon-repeat</li>
+						<li><i class="icon-refresh"></i> icon-refresh</li>
+						<li><i class="icon-list-alt"></i> icon-list-alt</li>
+						<li><i class="icon-lock"></i> icon-lock</li>
+						<li><i class="icon-flag"></i> icon-flag</li>
+						<li><i class="icon-headphones"></i> icon-headphones</li>
+						<li><i class="icon-volume-off"></i> icon-volume-off</li>
+						<li><i class="icon-volume-down"></i> icon-volume-down</li>
+						<li><i class="icon-volume-up"></i> icon-volume-up</li>
+						<li><i class="icon-qrcode"></i> icon-qrcode</li>
+						<li><i class="icon-barcode"></i> icon-barcode</li>
+						<li><i class="icon-tag"></i> icon-tag</li>
+						<li><i class="icon-tags"></i> icon-tags</li>
+						<li><i class="icon-book"></i> icon-book</li>
+						<li><i class="icon-bookmark"></i> icon-bookmark</li>
+						<li><i class="icon-print"></i> icon-print</li>
+						<li><i class="icon-camera"></i> icon-camera</li>
+						<li><i class="icon-font"></i> icon-font</li>
+						<li><i class="icon-bold"></i> icon-bold</li>
+						<li><i class="icon-italic"></i> icon-italic</li>
+						<li><i class="icon-text-height"></i> icon-text-height</li>
+						<li><i class="icon-text-width"></i> icon-text-width</li>
+						<li><i class="icon-align-left"></i> icon-align-left</li>
+						<li><i class="icon-align-center"></i> icon-align-center</li>
+						<li><i class="icon-align-right"></i> icon-align-right</li>
+						<li><i class="icon-align-justify"></i> icon-align-justify</li>
+						<li><i class="icon-list"></i> icon-list</li>
+						
+						<li><i class="icon-indent-left"></i> icon-indent-left</li>
+						<li><i class="icon-indent-right"></i> icon-indent-right</li>
+						<li><i class="icon-facetime-video"></i> icon-facetime-video</li>
+						<li><i class="icon-picture"></i> icon-picture</li>
+						<li><i class="icon-pencil"></i> icon-pencil</li>
+						<li><i class="icon-map-marker"></i> icon-map-marker</li>
+						<li><i class="icon-adjust"></i> icon-adjust</li>
+						<li><i class="icon-tint"></i> icon-tint</li>
+						<li><i class="icon-edit"></i> icon-edit</li>
+						<li><i class="icon-share"></i> icon-share</li>
+						<li><i class="icon-check"></i> icon-check</li>
+						<li><i class="icon-move"></i> icon-move</li>
+						<li><i class="icon-step-backward"></i> icon-step-backward</li>
+						<li><i class="icon-fast-backward"></i> icon-fast-backward</li>
+						<li><i class="icon-backward"></i> icon-backward</li>
+						<li><i class="icon-play"></i> icon-play</li>
+						<li><i class="icon-pause"></i> icon-pause</li>
+						<li><i class="icon-stop"></i> icon-stop</li>
+						<li><i class="icon-forward"></i> icon-forward</li>
+						<li><i class="icon-fast-forward"></i> icon-fast-forward</li>
+						<li><i class="icon-step-forward"></i> icon-step-forward</li>
+						<li><i class="icon-eject"></i> icon-eject</li>
+						<li><i class="icon-chevron-left"></i> icon-chevron-left</li>
+						<li><i class="icon-chevron-right"></i> icon-chevron-right</li>
+						<li><i class="icon-plus-sign"></i> icon-plus-sign</li>
+						<li><i class="icon-minus-sign"></i> icon-minus-sign</li>
+						<li><i class="icon-remove-sign"></i> icon-remove-sign</li>
+						<li><i class="icon-ok-sign"></i> icon-ok-sign</li>
+						
+						<li><i class="icon-question-sign"></i> icon-question-sign</li>
+						<li><i class="icon-info-sign"></i> icon-info-sign</li>
+						<li><i class="icon-screenshot"></i> icon-screenshot</li>
+						<li><i class="icon-remove-circle"></i> icon-remove-circle</li>
+						<li><i class="icon-ok-circle"></i> icon-ok-circle</li>
+						<li><i class="icon-ban-circle"></i> icon-ban-circle</li>
+						<li><i class="icon-arrow-left"></i> icon-arrow-left</li>
+						<li><i class="icon-arrow-right"></i> icon-arrow-right</li>
+						<li><i class="icon-arrow-up"></i> icon-arrow-up</li>
+						<li><i class="icon-arrow-down"></i> icon-arrow-down</li>
+						<li><i class="icon-share-alt"></i> icon-share-alt</li>
+						<li><i class="icon-resize-full"></i> icon-resize-full</li>
+						<li><i class="icon-resize-small"></i> icon-resize-small</li>
+						<li><i class="icon-plus"></i> icon-plus</li>
+						<li><i class="icon-minus"></i> icon-minus</li>
+						<li><i class="icon-asterisk"></i> icon-asterisk</li>
+						<li><i class="icon-exclamation-sign"></i> icon-exclamation-sign</li>
+						<li><i class="icon-gift"></i> icon-gift</li>
+						<li><i class="icon-leaf"></i> icon-leaf</li>
+						<li><i class="icon-fire"></i> icon-fire</li>
+						<li><i class="icon-eye-open"></i> icon-eye-open</li>
+						<li><i class="icon-eye-close"></i> icon-eye-close</li>
+						<li><i class="icon-warning-sign"></i> icon-warning-sign</li>
+						<li><i class="icon-plane"></i> icon-plane</li>
+						<li><i class="icon-calendar"></i> icon-calendar</li>
+						<li><i class="icon-random"></i> icon-random</li>
+						<li><i class="icon-comment"></i> icon-comment</li>
+						<li><i class="icon-magnet"></i> icon-magnet</li>
+						
+						<li><i class="icon-chevron-up"></i> icon-chevron-up</li>
+						<li><i class="icon-chevron-down"></i> icon-chevron-down</li>
+						<li><i class="icon-retweet"></i> icon-retweet</li>
+						<li><i class="icon-shopping-cart"></i> icon-shopping-cart</li>
+						<li><i class="icon-folder-close"></i> icon-folder-close</li>
+						<li><i class="icon-folder-open"></i> icon-folder-open</li>
+						<li><i class="icon-resize-vertical"></i> icon-resize-vertical</li>
+						<li><i class="icon-resize-horizontal"></i> icon-resize-horizontal</li>
+						<li><i class="icon-hdd"></i> icon-hdd</li>
+						<li><i class="icon-bullhorn"></i> icon-bullhorn</li>
+						<li><i class="icon-bell"></i> icon-bell</li>
+						<li><i class="icon-certificate"></i> icon-certificate</li>
+						<li><i class="icon-thumbs-up"></i> icon-thumbs-up</li>
+						<li><i class="icon-thumbs-down"></i> icon-thumbs-down</li>
+						<li><i class="icon-hand-right"></i> icon-hand-right</li>
+						<li><i class="icon-hand-left"></i> icon-hand-left</li>
+						<li><i class="icon-hand-up"></i> icon-hand-up</li>
+						<li><i class="icon-hand-down"></i> icon-hand-down</li>
+						<li><i class="icon-circle-arrow-right"></i> icon-circle-arrow-right</li>
+						<li><i class="icon-circle-arrow-left"></i> icon-circle-arrow-left</li>
+						<li><i class="icon-circle-arrow-up"></i> icon-circle-arrow-up</li>
+						<li><i class="icon-circle-arrow-down"></i> icon-circle-arrow-down</li>
+						<li><i class="icon-globe"></i> icon-globe</li>
+						<li><i class="icon-wrench"></i> icon-wrench</li>
+						<li><i class="icon-tasks"></i> icon-tasks</li>
+						<li><i class="icon-filter"></i> icon-filter</li>
+						<li><i class="icon-briefcase"></i> icon-briefcase</li>
+						<li><i class="icon-fullscreen"></i> icon-fullscreen</li>
+					</ul>
+				</section>
+				<div class="row">
+			<div class="span12">
+				<div class="tabbable"> <!-- Only required for left/right tabs -->
+					<ul class="nav nav-tabs">
+					<li class="active"><a href="#box-module" data-toggle="tab">Box Module</a></li>
+					<li><a href="#tab2" data-toggle="tab">Form</a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane active" id="box-module">
+							<div class="row" style="min-height: 600px">
+								<div class="span12">
+									<section id="module-classic">
+										<div class="page-header">
+											<h1>Box Module</h1>
+										</div>
+										<h3 class="head" id="md-classic">Box Module Classic</h3>
+										<p>Loại Box modue cơ bản nhất. có thể loại bỏ <strong>"module-title"</strong> hay <strong>"module-content"</strong> khi không cần thiết</p>
+										<div class="bs-docs-example">
+											<div class="box-module">
+												<h1 class="module-title">Module Title</h1>
+												<div class="module-content">
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dolor diam, congue sit amet feugiat a, viverra eget dolor. Nam convallis tempor ipsum et lacinia. Fusce gravida, nunc ut vulputate lobortis, tellus quam aliquam tellus, non elementum est felis quis sem. Duis condimentum purus sit amet magna fringilla vel luctus nisi congue. Aenean convallis tempor risus in tristique. Nullam tincidunt tristique eros in pharetra. Aliquam ultricies interdum tellus ut aliquet. In eu eros ullamcorper ligula rhoncus varius. Etiam egestas nibh ac erat tincidunt eu gravida tellus pellentesque. In vitae risus magna, non condimentum dolor. Donec tincidunt viverra ligula ut imperdiet. Nunc vel sollicitudin libero. Pellentesque at justo libero, eget facilisis nisi.</p>
+												</div>
+											</div>
+										</div>
+										<pre class="prettyprint linenums">
+&lt;div class="box-module"&gt;
+	&lt;h1 class="module-title">Module Title&lt;/h1&gt;
+	&lt;div class="module-content"&gt;
+		...
+	&lt;/div&gt;
+&lt;/div&gt;
+										</pre>
+										
+										<h3 class="head" id="md-bordered">Box Module borderd</h3>
+										<p>Loại Box modue có border. Thêm class <strong>"bordered"</strong></p>
+										<div class="bs-docs-example">
+											<div class="box-module bordered">
+												<h1 class="module-title">Module Title</h1>
+												<div class="module-content">
+													<p>Sed quis lorem a tortor congue aliquet. Nunc rutrum, nunc a pharetra luctus, nibh risus lacinia lectus, vitae suscipit ante ipsum porta metus. Nullam tempus diam eu quam porta vitae dapibus eros lobortis. Cras lacinia velit vel nulla ultrices egestas ac sit amet ligula. Maecenas interdum dignissim arcu ac mollis. Nulla facilisi. Maecenas quis erat in mi sodales blandit vel at augue. Mauris dignissim tortor viverra diam consectetur rutrum. Cras feugiat, purus ut accumsan elementum, augue nibh aliquet purus, a sagittis sem elit eu dolor. </p>
+												</div>
+											</div>
+										</div>
+																				<pre class="prettyprint linenums">
+&lt;div class="box-module bordered"&gt;
+	&lt;h1 class="module-title">Module Title&lt;/h1&gt;
+	&lt;div class="module-content"&gt;
+		...
+	&lt;/div&gt;
+&lt;/div&gt;
+										</pre>
+										
+										<h3 class="head" id="md-background">Box Module Background</h3>
+										<p>Loại Box modue có background. Thêm class <strong>"background"</strong> và thêm các class: <strong>"info"</strong>, <strong>"success"</strong>, <strong>"warning"</strong>, <strong>"error"</strong> để thay đổi màu sắc.</p>
+										<div class="bs-docs-example">
+											<div class="row-fluid">
+												<div class="span3">
+													<div class="box-module background info bordered">
+														<h1 class="module-title">Module Title</h1>
+														<div class="module-content">
+															<p>Sed quis lorem a tortor congue aliquet. </p>
+														</div>
+													</div>
+												</div>
+												<div class="span3">
+													<div class="box-module background success bordered">
+														<h1 class="module-title">Module Title</h1>
+														<div class="module-content">
+															<p>Sed quis lorem a tortor congue aliquet. </p>
+														</div>
+													</div>
+												</div>
+												<div class="span3">
+													<div class="box-module background warning bordered">
+														<h1 class="module-title">Module Title</h1>
+														<div class="module-content">
+															<p>Sed quis lorem a tortor congue aliquet. </p>
+														</div>
+													</div>
+												</div>
+												<div class="span3">
+													<div class="box-module background error bordered">
+														<h1 class="module-title">Module Title</h1>
+														<div class="module-content">
+															<p>Sed quis lorem a tortor congue aliquet. </p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+																				<pre class="prettyprint linenums">
+&lt;div class="box-module background bordered"&gt;
+	&lt;h1 class="module-title">Module Title&lt;/h1&gt;
+	&lt;div class="module-content"&gt;
+		...
+	&lt;/div&gt;
+&lt;/div&gt;
+										</pre>
+										
+										<h3>Box Module Gradient</h3>
+										<p>Loại Box modue có background gradient. Thêm class <strong>"gradient"</strong></p>
+										<div class="bs-docs-example">
+											<div class="box-module gradient bordered">
+												<h1 class="module-title">Module Title</h1>
+												<div class="module-content">
+													<p>Sed quis lorem a tortor congue aliquet. Nunc rutrum, nunc a pharetra luctus, nibh risus lacinia lectus, vitae suscipit ante ipsum porta metus. Nullam tempus diam eu quam porta vitae dapibus eros lobortis. Cras lacinia velit vel nulla ultrices egestas ac sit amet ligula. Maecenas interdum dignissim arcu ac mollis. Nulla facilisi. Maecenas quis erat in mi sodales blandit vel at augue. Mauris dignissim tortor viverra diam consectetur rutrum. Cras feugiat, purus ut accumsan elementum, augue nibh aliquet purus, a sagittis sem elit eu dolor. </p>
+												</div>
+											</div>
+										</div>
+																				<pre class="prettyprint linenums">
+&lt;div class="box-module gradient bordered"&gt;
+	&lt;h1 class="module-title">Module Title&lt;/h1&gt;
+	&lt;div class="module-content"&gt;
+		...
+	&lt;/div&gt;
+&lt;/div&gt;
+										</pre>
+										
+										<h3>Box Module Border Bold</h3>
+										<p>Loại Box modue có border bold. Thêm class <strong>"border-bold"</strong></p>
+										<div class="bs-docs-example">
+											<div class="box-module bordered border-bold">
+												<h1 class="module-title">Module Title</h1>
+												<div class="module-content">
+													<p>Sed quis lorem a tortor congue aliquet. Nunc rutrum, nunc a pharetra luctus, nibh risus lacinia lectus, vitae suscipit ante ipsum porta metus. Nullam tempus diam eu quam porta vitae dapibus eros lobortis. Cras lacinia velit vel nulla ultrices egestas ac sit amet ligula. Maecenas interdum dignissim arcu ac mollis. Nulla facilisi. Maecenas quis erat in mi sodales blandit vel at augue. Mauris dignissim tortor viverra diam consectetur rutrum. Cras feugiat, purus ut accumsan elementum, augue nibh aliquet purus, a sagittis sem elit eu dolor. </p>
+												</div>
+											</div>
+										</div>
+										<pre class="prettyprint linenums">
+&lt;div class="box-module bordered border-bold"&gt;
+	&lt;h1 class="module-title">Module Title&lt;/h1&gt;
+	&lt;div class="module-content"&gt;
+		...
+	&lt;/div&gt;
+&lt;/div&gt;
+										</pre>
+										
+										<h3>Box Module Has Tab - Tab 1</h3>
+										<p>Loại Box module là Tab thêm class: <strong>"tabbable tabs-top"</strong></p>
+										<div class="bs-docs-example">
+											<div class="area-module tabbable tabs-top">
+												<ul class="nav nav-tabs">
+													<li class="active"><a href="#tabA" data-toggle="tab">Tab 1</a></li>
+													<li><a href="#tabB" data-toggle="tab">Tab 2</a></li>
+												</ul>
+												<div class="tab-content box-content">
+													<div class="tab-pane active" id="tabA">
+														<p>Howdy, I'm in Section 1.</p>
+													</div>
+													<div class="tab-pane" id="tabB">
+														<p>Howdy, I'm in Section 2.</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<pre class="prettyprint linenums">
+&lt;div class="area-module tabbable tabs-top"&gt;
+	&lt;ul class="nav nav-tabs"&gt;
+		&lt;li class="active"&gt;&lt;a href="#tab1" data-toggle="tab"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#tab2" data-toggle="tab"&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div class="tab-content box-content"&gt;
+		&lt;div class="tab-pane active" id="tab1"&gt;
+			&lt;p&gt;Howdy, I'm in Section 1.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="tab-pane" id="tab2"&gt;
+			&lt;p&gt;Howdy, I'm in Section 2.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+										</pre>
+										
+										<h3>Box Module Has Tab - Tab 2</h3>
+										<p>Loại Box module là Tab thêm class: <strong>"bordered tabbable tabs-top"</strong></p>
+										<div class="bs-docs-example">
+											<div class="area-module bordered tabbable tabs-top">
+												<ul class="nav nav-tabs">
+													<li class="active"><a href="#tabC" data-toggle="tab">Tab 1</a></li>
+													<li><a href="#tabD" data-toggle="tab">Tab 2</a></li>
+												</ul>
+												<div class="tab-content box-content">
+													<div class="tab-pane active" id="tabC">
+														<p>Howdy, I'm in Section 1.</p>
+													</div>
+													<div class="tab-pane" id="tabD">
+														<p>Howdy, I'm in Section 2.</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<pre class="prettyprint linenums">
+&lt;div class="area-module bordered tabbable tabs-top"&gt;
+	&lt;ul class="nav nav-tabs"&gt;
+		&lt;li class="active"&gt;&lt;a href="#tab1" data-toggle="tab"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#tab2" data-toggle="tab"&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div class="tab-content box-content"&gt;
+		&lt;div class="tab-pane active" id="tab1"&gt;
+			&lt;p&gt;Howdy, I'm in Section 1.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="tab-pane" id="tab2"&gt;
+			&lt;p&gt;Howdy, I'm in Section 2.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+										</pre>
+									</section>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="tab2">
+							<div class="row" style="min-height: 600px">
+								<div class="span12">
+									<div class="page-header">
+										<h1>FORM</h1>
+									</div>
+									<h3>FORM Horizontal</h3>
+									<p>Form có các thành phần sắp xếp theo hàng dọc. Thêm class <strong>"border-bold"</strong></p>
+									<div class="bs-docs-example">
+										<form class="form-horizontal">
+											<div class="control-group">
+											  <label for="inputEmail" class="control-label">Email</label>
+											  <div class="controls">
+												<input type="text" placeholder="Email" id="inputEmail">
+											  </div>
+											</div>
+											<div class="control-group">
+											  <label for="inputPassword" class="control-label">Password</label>
+											  <div class="controls">
+												<input type="password" placeholder="Password" id="inputPassword">
+											  </div>
+											</div>
+											<div class="control-group">
+											  <div class="controls">
+												<label class="checkbox">
+												  <input type="checkbox"> Remember me
+												</label>
+												<button class="btn" type="submit">Sign in</button>
+											  </div>
+											</div>
+										  </form>
+									</div>
+									<pre class="prettyprint linenums">
+&lt;form class="form-horizontal"&gt;
+	&lt;div class="control-group"&gt;
+		&lt;label for="inputEmail" class="control-label"&gt;Email&lt;/label&gt;
+		&lt;div class="controls"&gt;
+			&lt;input type="text" placeholder="Email" id="inputEmail"&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="control-group"&gt;
+		&lt;label for="inputPassword" class="control-label"&gt;Password&lt;/label&gt;
+		&lt;div class="controls"&gt;
+			&lt;input type="password" placeholder="Password" id="inputPassword"&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="control-group"&gt;
+		&lt;div class="controls"&gt;
+			&lt;label class="checkbox"&gt;
+				&lt;input type="checkbox"&gt; Remember me
+			&lt;/label&gt;
+			&lt;button class="btn" type="submit"&gt;Sign in&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;div&gt;
+&ltform&gt;
+									</pre>
+									<h3>FORM Inline</h3>
+									<p>Form có các thành phần nằm trên 1 dòng. Thêm class <strong>"form-inline"</strong></p>
+									<div class="bs-docs-example">
+										<form class="form-inline">
+											<input type="text" class="input-small" placeholder="Email">
+											<button type="submit" class="btn">Sign in</button>
+											<input type="password" class="input-small" placeholder="Password">
+											<select>
+												<option>option 1</option>
+												<option>option 2</option>
+												<option>option 3</option>
+											</select>
+											<button type="submit" class="btn btn-primary">Sign in</button>
+											<label class="checkbox">
+											<input type="checkbox"> Remember me
+											</label>
+											<button type="submit" class="btn">Sign in</button>
+										</form>
+									</div>
+									<pre class="prettyprint linenums">
+&lt;form class="form-inline"&gt;
+	&lt;input type="text" class="input-small" placeholder="Email"&gt;
+	&lt;input type="password" class="input-small" placeholder="Password"&gt;
+	&lt;label class="checkbox"&gt;
+	&lt;input type="checkbox"&gt; Remember me
+	&lt;/label&gt;
+	&lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+&lt;/form&gt;
+									</pre>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			</div><!--End #main-->
+			<div id="footer">
+			</div><!--End #footer-->
+		</div>
+		<!-- Le javascript
+		================================================== -->
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/bootstrap.js"></script>
+		<script src="../assets/js/holder/holder.js"></script>
+		<script src="../assets/js/google-code-prettify/prettify.js"></script>
+		<script src="js/application.js"></script>
+	</body>
+</html>
