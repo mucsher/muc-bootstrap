@@ -15,7 +15,7 @@
 
 // TODO: Define Style Margin-Padding
 //---------------------------------------
-.marginAndPadding(@iterations, @counDown: 5)
+.marginAndPadding(@iterations, @countDown: 5)
 {
 	.pd0 {padding: 0px;}
 	.pdT0{padding-top: 0px;}
@@ -92,7 +92,7 @@
 	(~".mg-@{index}-0-ipt") {margin: ~"@{index}px" 0!important;}
 
 	// next iteration
-	.style_margin_padding(@index - @counDown);
+	.style_margin_padding(@index - @countDown);
 
 	}
 	// end the loop when index is 0
@@ -339,23 +339,43 @@
 
 // TODO: FLOAT LIQUID LAYOUT
 #floatLiquidLayout() {
-    .fixedFluid(@fixedWidth, @space, @fixedName: fixed-colum, @fluidName: fluid-colum){
+    .fixedFluid(@fixedWidth, @space: @gridGutterWidth, @fixedName: fixed-colum, @fluidName: fluid-colum){
         .@{fixedName}{
             float: left;
             width: @fixedWidth;
+            + .@{fluidName} {
+                margin-left: @fixedWidth + @space;
+            }
         }
-        .@{fluidName} {
-            margin-left: @fixedWidth + @space;
-        }   
+    }
+    .fixedFluidOverflow(@fixedWidth, @space: @gridGutterWidth, @fixedName: fixed-colum, @fluidName: fluid-colum){
+        .@{fixedName}{
+            float: left;
+            width: @fixedWidth;
+            margin-right: @space;
+            + .@{fluidName} {
+               overflow: hidden;
+            }
+        }
     }
     
-    .fluidFixed(@fixedWidth, @space, @fixedName: fixed-colum, @fluidName: fluid-colum){
+    .fluidFixed(@fixedWidth, @space: @gridGutterWidth, @fixedName: fixed-colum, @fluidName: fluid-colum){
         .@{fixedName}{
             float: right;
             width: @fixedWidth;
+            + .@{fluidName} {
+                margin-right: @fixedWidth + @space;
+            } 
         }
-        .@{fluidName} {
-            margin-right: @fixedWidth + @space;
-        }   
+    }
+    .fluidFixedOverflow(@fixedWidth, @space: @gridGutterWidth, @fixedName: fixed-colum, @fluidName: fluid-colum){
+        .@{fixedName}{
+            float: right;
+            width: @fixedWidth;
+            margin-left: @space;
+            + .@{fluidName} {
+                overflow: hidden;
+            } 
+        }
     }
 }
